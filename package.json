@@ -1,6 +1,6 @@
 {
   "name": "date-to-yyyymmdd",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "date to file name",
   "licence": "MIT",
   "main": "./build/index.js",
