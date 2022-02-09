@@ -1,5 +1,5 @@
 {
-  "name": "typescript-npm-package-tpl",
+  "name": "date-to-yyyymmdd",
   "version": "1.0.0",
   "description": "date to file name",
   "licence": "MIT",
