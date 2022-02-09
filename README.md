@@ -1,23 +1,24 @@
-# typescript-npm-package-tpl
+# Date to YYMMDD type string
 
-Use this package to create a typescript based package for npm.
+As the title says.
 
-Ensure you update:
-- package.json
-- .github/ISSUE_TEMPLATE files
-- githooks to your style
-- CODE_OF_CONDUCT
-- CONTRIBUTING
-- LICENCE
-- This readme file :)
-- Any anything else.
+This is a fork of yymmdd
 
-## ttypescript:
-This uses ttypescript which allows use of the ts-transform-paths plugin found in the tsconfig.
-This basically transforms the output of any shortcuts (eg `@/myfile.ts`) to the full relative paths, without this the shortcuts break as node cannot resolve them.
+This package on npm had no github repo so I basically didn't trust it.
 
-## CI + Coverage
-This is ready to go with travis and codecov, though you will need to create an account on both of these services and point them to the correct repos, but the travis.yml is about all you should need and the codecov as seen in the package.json file.
+# sample
 
-## Missed anything?
-Create a pull request and get your input merged in, thanks.
+If the system time is 2020-01-02 03:04:15
+
+```ts
+import { yyyymmdd, yyyymmddhhmmss, yyyy_mm_dd, yyyy_mm_dd_hh_mm_ss } from "yymmdd";
+yyyymmdd(); // 20200102
+yyyymmdd(new Date("2020/01/05")); // 20200105
+yyyymmddhhmmss(); // 20200102030415
+yyyymmddhhmmss(new Date("2020/01/05 12:13:14")); // 20200105121314
+
+yyyy_mm_dd(); // 2020-01-02
+yyyy_mm_dd(new Date("2020/01/05")); // 2020-01-05
+yyyy_mm_dd_hh_mm_ss(); // 2020-01-02 03:04:15
+yyyy_mm_dd_hh_mm_ss(new Date("2020/01/05 12:13:14")); // 2020-01-05 12:13:14
+```
