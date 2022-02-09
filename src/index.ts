@@ -20,22 +20,35 @@ function getDate (dt?: Date) {
   };
 }
 
+/**
+ * @returns {number} For example '20220209'
+ */
 export const yyyymmdd = (dt?: Date) => {
   const _a = getDate(dt), year = _a.year, month = _a.month, date = _a.date;
   return '' + year + month + date;
 };
 
+
+/**
+ * @returns {number} For example '20220209105748'
+ */
 export const yyyymmddhhmmss = (dt?: Date) => {
   const _a = getDate(dt), year = _a.year, month = _a.month, date = _a.date, hours = _a.hours, minutes = _a.minutes,
     seconds = _a.seconds;
   return '' + year + month + date + hours + minutes + seconds;
 };
 
+/**
+ * @returns {number} For example '2022-02-09 10:57:48'
+ */
 export const yyyy_mm_dd = (dt?: Date) => {
   const _a = getDate(dt), year = _a.year, month = _a.month, date = _a.date;
   return year + '-' + month + '-' + date;
 };
 
+/**
+ * @returns {number} For example '2022-02-09'
+ */
 export const yyyy_mm_dd_hh_mm_ss = (dt?: Date) => {
   const _a = getDate(dt), year = _a.year, month = _a.month, date = _a.date, hours = _a.hours, minutes = _a.minutes,
     seconds = _a.seconds;
